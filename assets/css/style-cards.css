@@ -1,0 +1,17 @@
+.card-wrapper .card-body {
+	background: url("../img/bg-primary-darkred.jpg");
+	padding: 1rem;
+}
+
+.card-wrapper .card-text, .card-wrapper a {
+	text-decoration: none !important;
+	color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.card-wrapper a strong {
+	color: rgba(255, 255, 255, 0.9);
+}
+
+.card-wrapper a:hover img, .card-wrapper a:focus img, .card-wrapper a:active img {
+	opacity: 0.95;
+}

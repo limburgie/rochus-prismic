@@ -1,0 +1,71 @@
+.navbar-light .navbar-brand,
+.navbar-light .navbar-brand:hover,
+.navbar-light .navbar-brand:active {
+	color: #DBB668;
+	text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+.navbar-light .navbar-brand .navbar-brand-logo {
+	opacity: 0.9;
+}
+
+.navbar-light .navbar-nav .nav-link {
+	color: rgba(256, 256, 256, 0.6) !important;
+	font-family: 'Fira Sans', sans-serif;
+}
+
+.navbar-light .navbar-nav .nav-item.active .nav-link,
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:focus {
+	color: rgba(256, 256, 256, 0.9) !important;
+}
+
+.navbar-light .navbar-toggler {
+	border: none;
+	outline: none;
+	padding: .25rem 0;
+}
+
+.navbar-light .navbar-toggler .navbar-toggler-icon {
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.7)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.navbar-light .navbar-toggler .navbar-toggler-label {
+	color: rgba(255, 255, 255, 0.7);
+	font-family: 'Fira Sans', sans-serif;
+	vertical-align: middle;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+	background: #f8f9fa;
+	color: #212529;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+	.navbar-light .navbar-nav .nav-link {
+		font-size: 1.2rem;
+	}
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+	.navbar-light .navbar-brand {
+		font-size: 2rem;
+	}
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+	.navbar-light .navbar-nav .nav-item+.nav-item {
+		margin-left: 1rem;
+	}
+
+	.navbar-brand-title {
+		position: absolute;
+	}
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  }

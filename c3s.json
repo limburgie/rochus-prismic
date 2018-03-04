@@ -1,0 +1,129 @@
+{
+	"name": "St.-Rochus Zutendaal",
+	"indexPageFriendlyUrl": "home",
+	"templateEngine": "FREEMARKER",
+
+	"contentRepositoryConnection": {
+		"type": "PRISMIC",
+		"repositoryId": "https://rochus.prismic.io/api",
+		"accessToken": null
+	},
+
+	"templates": [
+		{
+			"name": "template",
+			"contents": "templates/template.ftl"
+		}
+	],
+
+	"errorPage": {
+		"name": "Fout",
+		"template": "template",
+		"inserts": {
+			"body": "pages/error.ftl"
+		}
+	},
+
+	"pages": [
+		{
+			"friendlyUrl": "home",
+			"name": "Home",
+			"hidden": true,
+			"template": "template",
+			"inserts": {
+				"body": "pages/home.ftl",
+				"jumbotron": "pages/inserts/jumbotron.ftl"
+			}
+		},
+		{
+			"friendlyUrl": "onze-club",
+			"name": "Onze club",
+			"children": [
+				{
+					"friendlyUrl": "schutters",
+					"name": "Schutters",
+					"template": "template",
+					"inserts": {
+						"body": "pages/schutters.ftl"
+					}
+				},
+				{
+					"friendlyUrl": "fotoalbums",
+					"name": "Fotoalbums",
+					"template": "template",
+					"inserts": {
+						"body": "pages/fotoalbums.ftl"
+					}
+				},
+				{
+					"friendlyUrl": "geschiedenis",
+					"name": "Geschiedenis",
+					"template": "template",
+					"inserts": {
+						"body": "pages/geschiedenis.ftl"
+					}
+				},
+				{
+					"friendlyUrl": "patroonheilige",
+					"name": "Onze patroonheilige",
+					"template": "template",
+					"inserts": {
+						"body": "pages/patroonheilige.ftl"
+					}
+				}
+			]
+		},
+		{
+			"friendlyUrl": "seizoen",
+			"name": "Seizoen 2018",
+			"children": [
+				{
+					"friendlyUrl": "schutterijen",
+					"name": "Schutterijen",
+					"template": "template",
+					"inserts": {
+						"body": "pages/schutterijen.ftl"
+					}
+				},
+				{
+					"friendlyUrl": "wedstrijdschema",
+					"name": "Wedstrijdschema",
+					"template": "template",
+					"inserts": {
+						"body": "pages/wedstrijdschema.ftl"
+					}
+				}
+			]
+		},
+		{
+			"friendlyUrl": "historisch",
+			"name": "Historisch",
+			"children": [
+				{
+					"friendlyUrl": "hall-of-fame",
+					"name": "Hall of fame",
+					"template": "template",
+					"inserts": {
+						"body": "pages/hall-of-fame.ftl"
+					}
+				},
+				{
+					"friendlyUrl": "koningskoppels",
+					"name": "Koningskoppels",
+					"template": "template",
+					"inserts": {
+						"body": "pages/koningskoppels.ftl"
+					}
+				}
+			]
+		},
+		{
+			"friendlyUrl": "klepschieten",
+			"name": "Wat is klepschieten?",
+			"template": "template",
+			"inserts": {
+				"body": "pages/klepschieten.ftl"
+			}
+		}
+	]
+}

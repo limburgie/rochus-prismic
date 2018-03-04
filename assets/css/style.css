@@ -1,0 +1,112 @@
+@import "style-navigation.css";
+@import "style-introduction.css";
+@import "style-footer.css";
+@import "style-cards.css";
+@import "style-article.css";
+@import "style-gallery.css";
+
+html {
+	font-size: 15px;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1.5rem;
+}
+
+header {
+	background: url("../img/bg-primary-green.jpg") no-repeat;
+	background-size: cover;
+	padding: 2rem 0;
+	position: relative;
+}
+
+a, a:hover, a:focus, a:active {
+	color: #0F6112;
+	outline: none !important;
+	border: none !important;
+	-moz-outline-style: none !important;
+	box-shadow: none !important;
+}
+
+.ekko-lightbox a:hover {
+	color: white;
+}
+
+.btn-primary {
+	background: url("../img/bg-primary-darkred.jpg") !important;
+	border-color: #952B36 !important;
+	color: #fff !important;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+	opacity: 0.95;
+}
+
+h2 {
+	font-size: 1.4rem;
+	margin: 2.5rem 0 1.5rem;
+	font-family: 'Fira Sans', sans-serif;
+	color: #872325;
+}
+
+h3 {
+	font-size: 1.3rem;
+	font-family: 'Fira Sans', sans-serif;
+}
+
+.table .thead-dark th {
+	background: transparent;
+	border: none;
+}
+
+.table .thead-dark {
+	background: url("../img/bg-primary-darkred.jpg") 0 200px;
+	border-color: #872325;
+}
+
+.game-box {
+	background: url("../img/bg-gray-light.jpg");
+	padding: 1rem;
+}
+
+.game-box .game-date {
+	color: #999;
+	font-size: 0.8rem;
+}
+
+.game-box .game-type {
+	color: #555;
+}
+
+.game-box a {
+	text-decoration: none !important;
+}
+
+.game-box .game-location {
+	color: #333;
+}
+
+.team-result {
+	background: url("../img/bg-primary-darkred.jpg") 0 200px;
+	margin-top: 1rem;
+	padding: 1rem;
+}
+
+.team-result span {
+	display: block;
+	color: rgba(255, 255, 255, 0.7);
+}
+
+.team-result .team {
+	font-size: 1.5rem;
+	color: rgba(255, 255, 255, 0.9);
+}
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+	.game-box .game-date span {
+		display: block;
+	}
+}
