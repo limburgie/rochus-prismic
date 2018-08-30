@@ -1,5 +1,5 @@
 <#if request.params[0]??>
-	<#assign schutterij = api.query("schutterij").with("uid", request.params[0]).findFirst()>
+	<#assign schutterij = api.query("schutterij").with("uid", request.params[0]).findOne()>
 	<#assign schietstand = schutterij.getReference("schietstand")>
 	<#assign lat = schietstand.getNumber("latitude").format("0.000000")>
 	<#assign lon = schietstand.getNumber("longitude").format("0.000000")>
@@ -16,9 +16,11 @@
 					frameborder="0" style="border:0; margin-bottom: 10px"
 					src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCqPNGxsnsAHYu6ntBN5EJhsnmGtiPBwao&q=${lat},${lon}&zoom=16" allowfullscreen>
 			</iframe>
-			<p>
-				<a href="${schutterij.getText("website_url")}" target="_blank">${schutterij.getText("website_url")}</a>
-			</p>
+			<#if schutterij.getText("website_url")??>
+				<p>
+					<a href="${schutterij.getText("website_url")}" target="_blank">${schutterij.getText("website_url")}</a>
+				</p>
+			</#if>
 			<p>
 				<a href="javascript:window.history.back()" class="btn btn-primary">Terug</a>
 			</p>

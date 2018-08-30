@@ -22,8 +22,8 @@
 			<div class="col-md-6 col-xl-4 card-wrapper">
 				<a href="/koningskoppels/${koningskoppel.getText("jaar")}">
 					<div class="card mb-4">
-						<#if !koningskoppel.getImage("foto").empty>
-							<img class="card-img-top" src="${koningskoppel.getImage("foto").url}" alt="${koningskoppel.getNumber("jaar").format("0")}">
+						<#if koningskoppel.getImage("foto")??>
+							<img class="card-img-top" src="${koningskoppel.getImage("foto").url}" alt="${koningskoppel.getText("jaar")}">
 						</#if>
 						<div class="card-body">
 							<p class="card-text">
@@ -55,7 +55,7 @@
 <#elseif jaar??>
 	<h2>Koningskoppel ${jaar}</h2>
 
-	<#assign koningskoppel = api.query("koningskoppel").with("jaar", jaar).findFirst()>
+	<#assign koningskoppel = api.query("koningskoppel").with("jaar", jaar).findOne()>
 
 	<div class="row">
 		<div class="col-sm-6">

@@ -1,26 +1,26 @@
 <div class="row justify-content-between">
 	<div class="col-lg-5 col-md-6">
-		<#assign todaysGame = api.query("wedstrijd").withDateToday("datum").findFirst()!>
+		<#assign todaysGame = api.query("wedstrijd").withDateToday("datum").findOne()!>
 
 		<#if todaysGame?has_content>
 			<h2>Wedstrijd vandaag</h2>
 			<@wedstrijd todaysGame true/>
 		</#if>
 
-		<#assign nextGame = api.query("wedstrijd").withDateInFuture("datum", false).orderByAsc("datum").findFirst()!>
+		<#assign nextGame = api.query("wedstrijd").withDateAfterToday("datum").orderByAsc("datum").findOne()!>
 		<#if nextGame?has_content>
 			<h2>Volgende wedstrijd</h2>
 			<@wedstrijd nextGame false/>
 		</#if>
 
-		<#assign previousGame = api.query("wedstrijd").withDateInPast("datum", false).orderByDesc("datum").findFirst()!>
+		<#assign previousGame = api.query("wedstrijd").withDateBeforeToday("datum").orderByDesc("datum").findOne()!>
 		<#if previousGame?has_content>
 			<h2>Laatste wedstrijd</h2>
 			<@wedstrijd previousGame true/>
 		</#if>
 	</div>
 
-	<#assign klassement = api.query("klassement").findFirst()>
+	<#assign klassement = api.query("klassement").findOne()>
 	<#list klassement.getGroup("stand")>
 	<div class="col-md-6">
 		<h2>Klassement Reeks ${klassement.getText("reeks")}</h2>
@@ -42,6 +42,7 @@
 			</#items>
 			</tbody>
 		</table>
+		<div class="last-updated">Laatste update: ${klassement.getModified("d MMMM 'om' HH'u'mm").withLocale("nl_BE")}</div>
 	</div>
 	</#list>
 </div>
@@ -53,7 +54,7 @@
 			<div class="container">
 				<div class="row justify-content-between">
 					<div class="col-sm-3 game-date text-sm-center mb-3 mb-sm-0 align-self-center">
-						<span>${wedstrijd.getDate("datum").format("EE dd/MM", "nl_BE")}</span>
+						<span>${wedstrijd.getDate("datum").format("EE dd/MM").withLocale("nl_BE")}</span>
 						<span class="d-md-none d-lg-block">om</span>
 						<span>${wedstrijd.getDate("datum").format("HH':'mm")}</span>
 					</div>

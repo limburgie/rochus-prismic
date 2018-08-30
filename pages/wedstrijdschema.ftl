@@ -11,7 +11,7 @@
 </#if>
 
 <#assign itemsPerPage = 20>
-<#assign query = api.query("wedstrijd").withDateInFuture("datum", true)>
+<#assign query = api.query("wedstrijd").withDateInFuture("datum")>
 
 <#assign total = query.count()>
 <#assign wedstrijden = query.orderByAsc("datum").findAll(from, itemsPerPage)>
@@ -28,7 +28,7 @@
 		<tbody>
 		<#items as wedstrijd>
 			<#assign schutterij = wedstrijd.getReference("organisator")>
-			<#assign datum = wedstrijd.getDate("datum").format("EEEE d MMMM 'om' HH'u'mm", "nl_BE")?cap_first>
+			<#assign datum = wedstrijd.getDate("datum").format("EEEE d MMMM 'om' HH'u'mm").withLocale("nl_BE")?cap_first>
 			<tr>
 				<td class="d-none d-md-table-cell">
 					${datum}

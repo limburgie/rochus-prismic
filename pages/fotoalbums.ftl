@@ -10,10 +10,12 @@
 </#if>
 
 <#if albumId??>
-	<#assign album = api.query("fotoalbum").with("uid", albumId).findFirst()>
+	<#assign album = api.query("fotoalbum").with("uid", albumId).findOne()>
 
 	<h2>${album.getText("naam")}</h2>
-	<p>${album.getText("beschrijving")}</p>
+	<#if album.getText("beschrijving")??>
+		<p>${album.getText("beschrijving")}</p>
+	</#if>
 
 	<div id="gallery">
 		<#list album.getGroup("fotos") as foto>
@@ -43,7 +45,9 @@
 						<div class="card-body">
 							<p class="card-text">
 								<strong>${album.getText("naam")}</strong><br/>
-								${album.getDate("datum").format("MMMM yyyy", "nl_BE")}
+								<#if album.getDate("datum")??>
+									${album.getDate("datum").format("MMMM yyyy").withLocale("nl_BE")}
+								</#if>
 							</p>
 						</div>
 					</div>

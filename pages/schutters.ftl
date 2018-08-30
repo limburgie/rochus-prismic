@@ -1,5 +1,5 @@
 <#if request.params[0]??>
-	<#assign schutter = api.query("schutter").with("uid", request.params[0]).findFirst()>
+	<#assign schutter = api.query("schutter").with("uid", request.params[0]).findOne()>
 	<#assign naam = '${schutter.getText("voornaam")} ${schutter.getText("achternaam")}'>
 
 	<h2>${naam}</h2>

@@ -1,12 +1,9 @@
 {
 	"name": "St.-Rochus Zutendaal",
-	"indexPageFriendlyUrl": "home",
-	"templateEngine": "FREEMARKER",
 
 	"contentRepositoryConnection": {
 		"type": "PRISMIC",
-		"repositoryId": "https://rochus.prismic.io/api",
-		"accessToken": null
+		"repositoryId": "https://rochus.cdn.prismic.io/api"
 	},
 
 	"templates": [

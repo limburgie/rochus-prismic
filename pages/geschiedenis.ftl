@@ -1,5 +1,5 @@
 <h2>Geschiedenis</h2>
 
 <article>
-	${api.query("geschiedenis").findFirst().getRichText("geschiedenis").html}
+	${api.query("geschiedenis").findOne().getRichText("geschiedenis").html}
 </article>

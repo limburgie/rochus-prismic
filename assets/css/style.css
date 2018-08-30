@@ -103,6 +103,12 @@ h3 {
 	color: rgba(255, 255, 255, 0.9);
 }
 
+.last-updated {
+	text-align: right;
+	font-size: 0.8em;
+	color: #777;
+}
+
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
