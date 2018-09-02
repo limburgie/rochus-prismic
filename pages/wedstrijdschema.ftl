@@ -28,7 +28,7 @@
 		<tbody>
 		<#items as wedstrijd>
 			<#assign schutterij = wedstrijd.getReference("organisator")>
-			<#assign datum = wedstrijd.getDate("datum").format("EEEE d MMMM 'om' HH'u'mm").withLocale("nl_BE")?cap_first>
+			<#assign datum = wedstrijd.getDate("datum").format("EEEE d MMMM 'om' HH'u'mm").withTimeZone("Europe/Brussels").withLocale("nl_BE")?cap_first>
 			<tr>
 				<td class="d-none d-md-table-cell">
 					${datum}

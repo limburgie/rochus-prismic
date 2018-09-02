@@ -56,7 +56,7 @@
 					<div class="col-sm-3 game-date text-sm-center mb-3 mb-sm-0 align-self-center">
 						<span>${wedstrijd.getDate("datum").format("EE dd/MM").withLocale("nl_BE")}</span>
 						<span class="d-md-none d-lg-block">om</span>
-						<span>${wedstrijd.getDate("datum").format("HH':'mm")}</span>
+						<span>${wedstrijd.getDate("datum").format("HH':'mm").withTimeZone("Europe/Brussels")}</span>
 					</div>
 					<div class="col-sm-8 align-self-center">
 						<h3 class="game-location">${organisator.getText("naam")}</h3>
