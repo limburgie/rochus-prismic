@@ -10,7 +10,7 @@
 				<img class="img-fluid" src="${schutter.getImage("foto").url}"/>
 			</p>
 		</div>
-		<div class="col-sm-8 col-md-8">
+		<div class="col-sm-8 col-md-8" data-c3s-id="${schutter.id}">
 			<p>
 				${schutter.getText("voornaam")} is aangesloten bij de club sinds <strong>${schutter.getNumber("aansluitingsjaar").format("0")}.</strong>
 			</p>

@@ -17,7 +17,7 @@
 		<p>${album.getText("beschrijving")}</p>
 	</#if>
 
-	<div id="gallery">
+	<div id="gallery" data-c3s-id="${album.id}">
 		<#list album.getGroup("fotos") as foto>
 			<a href="${foto.getImage("foto").url}" data-toggle="lightbox" data-gallery="gallery">
 				<img src="${foto.getImage("foto").url}"/>

@@ -109,6 +109,16 @@ h3 {
 	color: #777;
 }
 
+.c3s-edit-link {
+	text-decoration: none !important;
+}
+
+.c3s-edit-link:after {
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	content: "\f303";
+}
+
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {

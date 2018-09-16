@@ -22,7 +22,7 @@
 
 	<#assign klassement = api.query("klassement").findOne()>
 	<#list klassement.getGroup("stand")>
-	<div class="col-md-6">
+	<div class="col-md-6" data-c3s-id="${klassement.id}">
 		<h2>Klassement Reeks ${klassement.getText("reeks")}</h2>
 		<table class="table table-light table-striped table-klassement">
 			<thead class="thead-dark">

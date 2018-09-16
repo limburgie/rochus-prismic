@@ -7,7 +7,7 @@
 	<h2>${schutterij.getText("naam")}</h2>
 
 	<div class="row">
-		<div class="col-lg-6">
+		<div class="col-lg-6" data-c3s-id="${schutterij.id}">
 			<p>
 				${schietstand.getText("adres")}
 			</p>

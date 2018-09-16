@@ -63,7 +63,7 @@
 				<img class="img-fluid" src="${koningskoppel.getImage("foto").url}"/>
 			</p>
 		</div>
-		<div class="col-sm-6">
+		<div class="col-sm-6" data-c3s-id="${koningskoppel.id}">
 			<p>
 				Koning: <strong><@koningsschutter koningskoppel true/></strong><br/>
 				Koningin: <strong><@koningsschutter koningskoppel false/></strong>
