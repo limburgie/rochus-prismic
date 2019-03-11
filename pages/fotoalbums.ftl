@@ -46,7 +46,7 @@
 							<p class="card-text">
 								<strong>${album.getText("naam")}</strong><br/>
 								<#if album.getDate("datum")??>
-									${album.getDate("datum").format("MMMM yyyy").withLocale("nl_BE")}
+									${album.getDate("datum").format("MMMM yyyy")}
 								</#if>
 							</p>
 						</div>

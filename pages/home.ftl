@@ -42,7 +42,7 @@
 			</#items>
 			</tbody>
 		</table>
-		<div class="last-updated">Laatste update: ${klassement.getModified("d MMMM 'om' HH'u'mm").withLocale("nl_BE")}</div>
+		<div class="last-updated">Laatste update: ${klassement.getModified("d MMMM 'om' HH'u'mm")}</div>
 	</div>
 	</#list>
 </div>
@@ -54,9 +54,9 @@
 			<div class="container">
 				<div class="row justify-content-between">
 					<div class="col-sm-3 game-date text-sm-center mb-3 mb-sm-0 align-self-center">
-						<span>${wedstrijd.getDate("datum").format("EE dd/MM").withLocale("nl_BE")}</span>
+						<span>${wedstrijd.getDate("datum").format("EE dd/MM")}</span>
 						<span class="d-md-none d-lg-block">om</span>
-						<span>${wedstrijd.getDate("datum").format("HH':'mm").withTimeZone("Europe/Brussels")}</span>
+						<span>${wedstrijd.getDate("datum").format("HH':'mm")}</span>
 					</div>
 					<div class="col-sm-8 align-self-center">
 						<h3 class="game-location">${organisator.getText("naam")}</h3>

@@ -23,12 +23,13 @@
 				<th class="d-none d-md-table-cell">Datum</th>
 				<th class="d-none d-md-table-cell">Club</th>
 				<th class="d-none d-md-table-cell">Type</th>
+				<th></th>
 			</tr>
 		</thead>
 		<tbody>
 		<#items as wedstrijd>
 			<#assign schutterij = wedstrijd.getReference("organisator")>
-			<#assign datum = wedstrijd.getDate("datum").format("EEEE d MMMM 'om' HH'u'mm").withTimeZone("Europe/Brussels").withLocale("nl_BE")?cap_first>
+			<#assign datum = wedstrijd.getDate("datum").format("EEEE d MMMM 'om' HH'u'mm")?cap_first>
 			<tr>
 				<td class="d-none d-md-table-cell">
 					${datum}
@@ -42,6 +43,9 @@
 				</td>
 				<td class="d-none d-md-table-cell">
 					<@type wedstrijd.getText("type")/>
+				</td>
+				<td>
+					<span data-c3s-id="${wedstrijd.id}"></span>
 				</td>
 			</tr>
 		</#items>

@@ -34,7 +34,7 @@
 						<li class="nav-item <#if page == request.page || page.children?seq_contains(request.page)>active</#if> <#if page.children?has_content>dropdown</#if>">
 							<#if page.children?has_content>
 								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-									${page.name}
+									${page.name} <#if page.friendlyUrl == "seizoen">${.now?string('yyyy')}</#if>
 								</a>
 								<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 									<#list page.children as subpage>
@@ -72,7 +72,7 @@
 					<div class="col-sm-6 col-lg-3">
 						<ul class="sitemap-item">
 							<li>
-								<span>${page.name}</span>
+								<span>${page.name} <#if page.friendlyUrl == "seizoen">${.now?string('yyyy')}</#if></span>
 								<#list page.children>
 									<ul>
 										<#items as subpage>

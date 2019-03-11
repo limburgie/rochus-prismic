@@ -1,8 +1,8 @@
 <#if request.params[0]??>
 	<#assign schutterij = api.query("schutterij").with("uid", request.params[0]).findOne()>
 	<#assign schietstand = schutterij.getReference("schietstand")>
-	<#assign lat = schietstand.getNumber("latitude").format("0.000000")>
-	<#assign lon = schietstand.getNumber("longitude").format("0.000000")>
+	<#assign lat = schietstand.getNumber("latitude").format("0.000000").withLocale("en_US")>
+	<#assign lon = schietstand.getNumber("longitude").format("0.000000").withLocale("en_US")>
 
 	<h2>${schutterij.getText("naam")}</h2>
 
