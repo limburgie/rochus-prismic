@@ -3,20 +3,17 @@
 		<#assign todaysGame = api.query("wedstrijd").withDateToday("datum").findOne()!>
 
 		<#if todaysGame?has_content>
-			<h2>Wedstrijd vandaag</h2>
-			<@wedstrijd todaysGame true/>
+			<@wedstrijd "Wedstrijd vandaag" todaysGame true/>
 		</#if>
 
 		<#assign nextGame = api.query("wedstrijd").withDateAfterToday("datum").orderByAsc("datum").findOne()!>
 		<#if nextGame?has_content>
-			<h2>Volgende wedstrijd</h2>
-			<@wedstrijd nextGame false/>
+			<@wedstrijd "Volgende wedstrijd" nextGame false/>
 		</#if>
 
 		<#assign previousGame = api.query("wedstrijd").withDateBeforeToday("datum").orderByDesc("datum").findOne()!>
 		<#if previousGame?has_content>
-			<h2>Laatste wedstrijd</h2>
-			<@wedstrijd previousGame true/>
+			<@wedstrijd "Laatste wedstrijd" previousGame true/>
 		</#if>
 	</div>
 
@@ -47,8 +44,9 @@
 	</#list>
 </div>
 
-<#macro wedstrijd wedstrijd metUitslagen>
+<#macro wedstrijd title wedstrijd metUitslagen>
 	<#assign organisator = wedstrijd.getReference("organisator")>
+	<h2>${title}</h2>
 	<div class="game-box">
 		<a href="/schutterijen/${organisator.uid}">
 			<div class="container">
@@ -58,7 +56,7 @@
 						<span class="d-md-none d-lg-block">om</span>
 						<span>${wedstrijd.getDate("datum").format("HH':'mm")}</span>
 					</div>
-					<div class="col-sm-8 align-self-center">
+					<div class="col-sm-8 align-self-center" data-c3s-id="${wedstrijd.id}">
 						<h3 class="game-location">${organisator.getText("naam")}</h3>
 						<span class="game-type">${wedstrijd.getText("type")}</span>
 					</div>
