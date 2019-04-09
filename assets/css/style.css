@@ -17,7 +17,7 @@ body {
 header {
 	background: url("../img/bg-primary-green.jpg") no-repeat;
 	background-size: cover;
-	padding: 2rem 0;
+	padding: 1.2rem 0;
 	position: relative;
 }
 
@@ -109,6 +109,10 @@ h3 {
 	color: #777;
 }
 
+.navbar {
+	padding: .5rem 0;
+}
+
 .c3s-edit-link {
 	text-decoration: none !important;
 }
@@ -122,7 +126,18 @@ h3 {
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
+	header {
+		padding: 2rem 0;
+	}
+
 	.game-box .game-date span {
 		display: block;
+	}
+}
+
+
+@media (min-width: 992px) {
+	.navbar-expand-lg .navbar-nav .nav-item:last-child .nav-link {
+		padding-right: 0;
 	}
 }

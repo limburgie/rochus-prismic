@@ -88,11 +88,19 @@
 					}
 				},
 				{
-					"friendlyUrl": "wedstrijdschema",
-					"name": "Wedstrijdschema",
+					"friendlyUrl": "kalender",
+					"name": "Kalender",
 					"template": "template",
 					"inserts": {
-						"body": "pages/wedstrijdschema.ftl"
+						"body": "pages/kalender.ftl"
+					}
+				},
+				{
+					"friendlyUrl": "uitslagen",
+					"name": "Uitslagen",
+					"template": "template",
+					"inserts": {
+						"body": "pages/uitslagen.ftl"
 					}
 				}
 			]

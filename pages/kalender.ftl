@@ -1,4 +1,4 @@
-<h2>Aankomende wedstrijden</h2>
+<h2>Wedstrijdkalender</h2>
 
 <p>
 	Onderstaand overzicht toont alle aankomende wedstrijden voor het huidige seizoen.
@@ -19,12 +19,12 @@
 <#list wedstrijden>
 	<table class="table table-light table-striped">
 		<thead class="thead-dark">
-			<tr>
-				<th class="d-none d-md-table-cell">Datum</th>
-				<th class="d-none d-md-table-cell">Club</th>
-				<th class="d-none d-md-table-cell">Type</th>
-				<th></th>
-			</tr>
+		<tr>
+			<th class="d-none d-md-table-cell">Datum</th>
+			<th class="d-none d-md-table-cell">Club</th>
+			<th class="d-none d-md-table-cell">Type</th>
+			<th class="d-none d-md-table-cell"></th>
+		</tr>
 		</thead>
 		<tbody>
 		<#items as wedstrijd>
@@ -56,14 +56,14 @@
 		<div class="col-auto mr-auto">
 			<#if from gt 1>
 				<p>
-					<a href="/wedstrijdschema/${from - 1}" class="btn btn-primary">Vroeger</a>
+					<a href="/kalender/${from - 1}" class="btn btn-primary">Vroeger</a>
 				</p>
 			</#if>
 		</div>
 		<div class="col-auto">
 			<#if total gt (from * itemsPerPage)>
 				<p>
-					<a href="/wedstrijdschema/${from + 1}" class="btn btn-primary">Later</a>
+					<a href="/kalender/${from + 1}" class="btn btn-primary">Later</a>
 				</p>
 			</#if>
 		</div>
