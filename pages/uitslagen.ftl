@@ -86,11 +86,11 @@
 	<#if wedstrijd.getGroup("uitslagen")??>
 		<#list wedstrijd.getGroup("uitslagen") as uitslag>
 			<#if uitslag.getText("ploeg")! == ploeg>
-				<#assign result = "">
+				<#assign result = "<nobr>">
 				<#if toonPloeg>
-					<#assign result = "${ploeg}-ploeg: ">
+					<#assign result = "${result}${ploeg}: ">
 				</#if>
-				<#return result + "<strong>" + uitslag.getNumber("treffers").format("0") + "</strong>">
+				<#return result + "<strong>" + uitslag.getNumber("treffers").format("0") + "</strong></nobr>">
 			</#if>
 		</#list>
 	</#if>
