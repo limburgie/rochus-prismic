@@ -1,0 +1,43 @@
+footer {
+	margin-top: 50px;
+	padding: 1.5rem 0 1rem;
+	@include cover-bg("green");
+	@include text-shadow;
+	color: rgba(#fff, 0.7);
+	position: relative;
+
+	.sitemap-item {
+		margin-bottom: 2rem;
+		padding: 0;
+		list-style: none;
+
+		ul {
+			padding-left: 2rem;
+		}
+
+		> li > span {
+			color: rgba(#fff, 0.8);
+			font-size: 1.1rem;
+			display: inline-block;
+			margin-bottom: 1rem;
+		}
+	}
+
+	a {
+		color: rgba(#fff, 0.5);
+		@include text-shadow;
+
+		&:hover, &:active {
+			color: rgba(#fff, 0.7);
+			text-decoration: none;
+		}
+	}
+
+	p {
+		text-align: right;
+	}
+
+	@include from(sm) {
+		padding: 4rem 0;
+	}
+}

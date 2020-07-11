@@ -1,0 +1,70 @@
+.navbar-light {
+	padding: .5rem 0;
+
+	.navbar-brand {
+		&, &:hover, &:active {
+			color: $yellow !important;
+			@include text-shadow;
+		}
+
+		@include from(md) {
+			font-size: 2rem;
+		}
+
+		.navbar-brand-logo {
+			opacity: 0.9;
+		}
+
+		@include from(lg) {
+			.navbar-brand-title {
+				position: absolute;
+			}
+		}
+	}
+
+	.navbar-nav {
+		.nav-link {
+			color: rgba(#fff, 0.6) !important;
+			font-family: $header-font;
+
+			@include from(sm) {
+				font-size: 1.2rem;
+			}
+		}
+
+		.dropdown-item:hover, .dropdown-item:active {
+			background-color: #eee !important;
+			color: $black;
+		}
+
+		.nav-item.active .nav-link, .nav-link:hover, .nav-link:focus {
+			color: rgba(#fff, 0.9) !important;
+		}
+
+		@include from(lg) {
+			.nav-item + .nav-item {
+				margin-left: 1rem;
+			}
+
+			.nav-item:last-child .nav-link {
+				padding-right: 0;
+			}
+		}
+	}
+
+	.navbar-toggler {
+		border: none;
+		outline: none;
+		padding: .25rem 0;
+
+		.navbar-toggler-icon {
+			background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.7)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+		}
+
+		.navbar-toggler-label {
+			color: rgba(#fff, 0.7);
+			font-family: $header-font;
+			vertical-align: middle;
+		}
+	}
+}

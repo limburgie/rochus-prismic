@@ -1,0 +1,67 @@
+html {
+	font-size: 15px;
+}
+
+body {
+	font-family: $base-font;
+	line-height: 1.5rem;
+}
+
+header {
+	@include cover-bg("green");
+	padding: 1.2rem 0;
+	position: relative;
+}
+
+a, a:hover, a:focus, a:active {
+	color: $green;
+	border: none !important;
+	box-shadow: none !important;
+	@include outline-none;
+}
+
+.btn-primary {
+	@include bg("red");
+	color: #fff !important;
+
+	&:hover, &:focus, &:active {
+		opacity: 0.95;
+	}
+}
+
+h2 {
+	font-size: 1.4rem;
+	margin: 2.5rem 0 1.5rem;
+	font-family: $header-font;
+	color: $red;
+}
+
+h3 {
+	font-size: 1.3rem;
+	font-family: $header-font;
+}
+
+.table .thead-dark {
+	@include bg("red", 0 200px);
+
+	th {
+		background: transparent;
+		border: none;
+	}
+}
+
+.last-updated {
+	text-align: right;
+	font-size: 0.8em;
+	color: $gray;
+}
+
+.c3s-edit-link {
+	text-decoration: none !important;
+
+	&:after {
+		font-family: $icon-font;
+		font-weight: 900;
+		content: "\f303";
+	}
+}

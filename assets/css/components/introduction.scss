@@ -1,0 +1,11 @@
+.introduction {
+	img {
+		@include box-shadow;
+		opacity: 0.9;
+	}
+
+	p {
+		@include text-shadow;
+		color: rgba(#fff, 0.7);
+	}
+}

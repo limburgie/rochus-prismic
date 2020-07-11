@@ -1,0 +1,33 @@
+@mixin outline-none {
+	outline: none !important;
+	-moz-outline-style: none !important;
+}
+
+@mixin box-shadow {
+	$value: 1px 1px 7px rgba(#000, 0.4);
+	-webkit-box-shadow: $value;
+	-moz-box-shadow: $value;
+	box-shadow: $value;
+}
+
+@mixin text-shadow {
+	text-shadow: 2px 2px 5px rgba(#000, 0.3);
+}
+
+@mixin bg($color, $position: 0 0) {
+	background: url("../img/bg-#{$color}.jpg") $position;
+}
+
+@mixin cover-bg($color) {
+	@include bg($color);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+@mixin from($device-type) {
+	$breakpoints: ("sm": 576px, "md": 768px, "lg": 992px, "xl": 1200px);
+
+	@media (min-width: map-get($breakpoints, $device-type)) {
+		@content;
+	}
+}

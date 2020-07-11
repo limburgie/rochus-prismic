@@ -1,0 +1,19 @@
+.card-wrapper {
+	.card-body {
+		@include bg("red");
+		padding: 1rem;
+	}
+
+	.card-text, a {
+		text-decoration: none !important;
+		color: rgba(#fff, 0.7) !important;
+	}
+
+	a strong {
+		color: rgba(#fff, 0.9);
+	}
+
+	a:hover img, a:focus img, a:active img {
+		opacity: 0.95;
+	}
+}

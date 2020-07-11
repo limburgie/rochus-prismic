@@ -1,0 +1,43 @@
+.game-box {
+	@include bg("gray");
+	padding: 1rem;
+
+	.game-date {
+		color: #999;
+		font-size: 0.8rem;
+
+		span {
+			@include from(sm) {
+				display: block;
+			}
+		}
+	}
+
+	.game-type {
+		color: #555;
+	}
+
+	.game-location {
+		color: #333;
+	}
+
+	a {
+		text-decoration: none !important;
+	}
+
+	.team-result {
+		@include bg("red", 0 200px);
+		margin-top: 1rem;
+		padding: 1rem;
+
+		span {
+			display: block;
+			color: rgba(#fff, 0.7);
+		}
+
+		.team {
+			font-size: 1.5rem;
+			color: rgba(#fff, 0.9);
+		}
+	}
+}
