@@ -1,10 +1,10 @@
 <#if request.params[0]??>
 	<#assign param = request.params[0]>
-	<#attempt>
+	<#if param?is_number>
 		<#assign from = param?number>
-	<#recover>
+	<#else>
 		<#assign albumId = param>
-	</#attempt>
+	</#if>
 <#else>
 	<#assign from = 1>
 </#if>
